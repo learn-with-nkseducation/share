@@ -1,13 +1,141 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #e26262;
+}
+
+::selection {
+  color: #fff;
+  background: #3498db;
+}
+
+.wrapper {
+  height: 98.5vh;
+  max-width: 410px;
+  background: #f0efef;
+  border-radius: 7px;
+  padding: 20px 10px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper.active {
+  height: 530px;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.header .logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header .head {
+  color: rgb(250, 61, 64);
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.qr-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 2px solid rgb(0, 0, 0);
+}
+
+.qr-code img {
+  width: 200px;
+}
+.qr-text {
+  padding: 0 0 10px 0;
+}
+
+.copy {
+  font-size: 12px;
+  margin-top: 20px;
+  width: 310px;
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+}
+.copy:hover {
+  cursor: pointer;
+}
+.form-div {
+  margin-top: 20px;
+}
+
+.phone {
+  border: none;
+  padding: 10px 0;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  outline: none;
+}
+.btn {
+  background-color: rgb(159, 252, 131);
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  border: none;
+}
+.flag {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  background-color: #fff;
+  padding: 10px;
+}
+.flag-logo {
+  width: 20px;
+}
+.download-div {
+  margin-top: 15px;
+}
+.link {
+  color: #3498db;
+}
+.logo-link,
+.link {
+  text-decoration: none;
+}
+@media (max-width: 430px) {
+  .qr-code img {
+    width: 160px;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
