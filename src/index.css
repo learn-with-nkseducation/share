@@ -158,10 +158,10 @@ body {
   }
   .phone,
   .btn {
-    width: 100%;
+    /* width: 100%; */
     box-sizing: border-box;
   }
-  .btn {
+  /* .btn {
     margin-top: 10px;
-  }
+  } */
 }
