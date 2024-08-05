@@ -7,6 +7,7 @@ let globalLink = "https://play.google.com/store/apps/details?id=co.iron.nobtg";
 const App = () => {
   const [qrValue, setQrValue] = useState("");
   const [whatsappNumber, setWhatsappNumber] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setQrValue(globalLink);
@@ -25,12 +26,12 @@ const App = () => {
 
   const handleShare = (e) => {
     e.preventDefault();
-    if (whatsappNumber) {
+    if (whatsappNumber.length === 10 && /^[0-9]+$/.test(whatsappNumber)) {
       const message = encodeURIComponent(globalLink);
-      const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+      const url = `https://wa.me/+91${whatsappNumber}?text=${message}`;
       window.open(url, "_blank");
     } else {
-      alert("Please enter a WhatsApp number.");
+      setError("Please enter a valid 10-digit Indian WhatsApp number.");
     }
   };
 
@@ -76,27 +77,28 @@ const App = () => {
 
         {/* WhatsApp Share */}
         <div className="form-div">
-          <form onSubmit={handleShare}>
+          <form
+            onSubmit={handleShare}
+            style={{ display: "flex", alignItems: "center" }}
+          >
             <span className="flag">
-              <img src={India} alt="logo" className="flag-logo" />
+              <img src={India} alt="flag" className="flag-logo" />
               &nbsp;+91
             </span>
             <input
               className="phone"
-              type="number"
+              type="text"
               placeholder="WhatsApp Number"
               maxLength={10}
-              minLength={10}
               value={whatsappNumber}
               onChange={(e) => setWhatsappNumber(e.target.value)}
-              max={500}
-              min={400}
             />
             <button className="btn" type="submit">
               <i className="fa fa-whatsapp" aria-hidden="true"></i>
               &nbsp;Share
             </button>
           </form>
+          {error && <p className="error-text">{error}</p>}
         </div>
       </div>
     </>

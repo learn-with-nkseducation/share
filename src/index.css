@@ -21,9 +21,9 @@ body {
 }
 
 .wrapper {
-  height: 98.5vh;
+  height: 90vh;
   max-width: 410px;
-  background: #be0d0d;
+  background: #fcfcfc;
   border-radius: 7px;
   padding: 20px 10px 0;
   transition: height 0.2s ease;
@@ -93,38 +93,39 @@ body {
   margin-top: 20px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 10px; /* Adds space between elements */
+}
+
+.flag {
+  display: flex;
+  align-items: center;
+  padding: 12.5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  background-color: #fff;
+}
+
+.flag-logo {
+  width: 20px;
 }
 
 .phone {
   border: none;
-  padding: 15px;
+  width: 150px;
+  padding: 15px 0;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
   outline: none;
-  flex: 1;
+  flex: 1; /* Takes up available space */
 }
 
 .btn {
   background-color: rgb(159, 252, 131);
   padding: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
   border: none;
-  box-shadow: 1px 2px 2px rgb(165, 165, 165);
-  border-radius: 5px;
-}
-
-.flag {
-  padding: 15px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  box-shadow: 1px 2px 2px rgb(165, 165, 165);
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-
-.flag-logo {
-  width: 20px;
-  margin-right: 5px;
 }
 
 .download-div {
