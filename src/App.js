@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Logo from "./logo.svg";
 import India from "./india.png";
+import logoUrl from "./india.png";
 
 let globalLink = "https://play.google.com/store/apps/details?id=co.iron.nobtg";
 
@@ -27,7 +28,9 @@ const App = () => {
   const handleShare = (e) => {
     e.preventDefault();
     if (whatsappNumber.length === 10 && /^[0-9]+$/.test(whatsappNumber)) {
-      const message = encodeURIComponent(globalLink);
+      const message = encodeURIComponent(
+        `Check out *NK's Education*! Join our online courses and enhance your skills. Download the app here: ${globalLink} \n\n![Logo](${logoUrl})`
+      );
       const url = `https://wa.me/+91${whatsappNumber}?text=${message}`;
       window.open(url, "_blank");
     } else {
