@@ -89,6 +89,8 @@ const App = () => {
               minLength={10}
               value={whatsappNumber}
               onChange={(e) => setWhatsappNumber(e.target.value)}
+              max={500}
+              min={400}
             />
             <button className="btn" type="submit">
               <i className="fa fa-whatsapp" aria-hidden="true"></i>

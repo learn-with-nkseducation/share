@@ -23,7 +23,7 @@ body {
 .wrapper {
   height: 98.5vh;
   max-width: 410px;
-  background: #f0efef;
+  background: #be0d0d;
   border-radius: 7px;
   padding: 20px 10px 0;
   transition: height 0.2s ease;
@@ -67,8 +67,9 @@ body {
 }
 
 .qr-code img {
-  width: 200px;
+  width: 250px;
 }
+
 .qr-text {
   padding: 0 0 10px 0;
 }
@@ -83,59 +84,83 @@ body {
   border-radius: 5px;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
 }
+
 .copy:hover {
   cursor: pointer;
 }
+
 .form-div {
   margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .phone {
   border: none;
-  padding: 10px 0;
+  padding: 15px;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
   outline: none;
+  flex: 1;
 }
+
 .btn {
   background-color: rgb(159, 252, 131);
-  padding: 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  padding: 15px;
   border: none;
+  box-shadow: 1px 2px 2px rgb(165, 165, 165);
+  border-radius: 5px;
 }
+
 .flag {
+  padding: 15px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
   background-color: #fff;
-  padding: 10px;
+  display: flex;
+  align-items: center;
 }
+
 .flag-logo {
   width: 20px;
+  margin-right: 5px;
 }
+
 .download-div {
   margin-top: 15px;
 }
+
 .link {
   color: #3498db;
 }
+
 .logo-link,
 .link {
   text-decoration: none;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .qr-code img {
+    width: 200px;
+  }
+}
+
 @media (max-width: 430px) {
   .qr-code img {
     width: 160px;
   }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
+  .form-div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .phone,
+  .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .btn {
+    margin-top: 10px;
+  }
 }
