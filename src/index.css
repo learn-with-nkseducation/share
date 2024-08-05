@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-  height: 90vh;
+  height: 94vh;
   max-width: 410px;
   background: #fcfcfc;
   border-radius: 7px;
@@ -150,7 +150,7 @@ body {
 
 @media (max-width: 430px) {
   .qr-code img {
-    width: 160px;
+    width: 250px;
   }
   .form-div {
     flex-direction: column;
