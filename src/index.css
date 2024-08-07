@@ -21,8 +21,8 @@ body {
 }
 
 .wrapper {
-  height: 590px;
-  max-width: 410px;
+  height: 600px;
+  max-width: 420px;
   background: #fcfcfc;
   border-radius: 7px;
   padding: 20px 10px 0;
@@ -160,7 +160,7 @@ body {
     align-items: stretch;
   }
   .wrapper {
-    margin-top: 70px;
+    margin-top: 75px;
   }
   .phone,
   .btn {
