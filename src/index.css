@@ -159,6 +159,9 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
+  .wrapper {
+    margin-top: 37px;
+  }
   .phone,
   .btn {
     /* width: 100%; */
