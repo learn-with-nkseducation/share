@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-  height: 88vh;
+  height: 590px;
   max-width: 410px;
   background: #fcfcfc;
   border-radius: 7px;
@@ -99,7 +99,8 @@ body {
 .flag {
   display: flex;
   align-items: center;
-  padding: 12.5px;
+  padding: 15px 12.5px;
+  font-size: 15px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
@@ -114,12 +115,14 @@ body {
   border: none;
   width: 150px;
   padding: 15px 0;
+  font-size: 15px;
   box-shadow: 1px 2px 2px rgb(165, 165, 165);
   outline: none;
   flex: 1; /* Takes up available space */
 }
 
 .btn {
+  font-size: 15px;
   background-color: rgb(159, 252, 131);
   padding: 15px;
   border-top-right-radius: 5px;
