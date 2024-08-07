@@ -112,6 +112,7 @@ body {
 }
 
 .phone {
+  padding-left: 2px;
   border: none;
   width: 150px;
   padding: 15px 0;
